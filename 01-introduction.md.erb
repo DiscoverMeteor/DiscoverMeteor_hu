@@ -8,23 +8,25 @@ paragraphs: 35
 ---
 
 
-Légy szíves végezz el egy kísérletet a kedvemért. Törölj egy fájlt az egyik ablakból. El fog az tűnni a másikból is?
+Végezz el fejben egy kísérletet a kedvemért! Képzeld el, hogy megnyitod ugyanazt a könyvtárat két különböző ablakban a számítógépeden.
 
-És igen! Ha módosítasz valamit a számítógépeden, az mindenhol frissítve lesz újratöltés nélkül. Ilyen egyszerű.
+Most kattints az egyik ablakba és törölj egy fájlt. Eltűnt a fájl másik ablakból is?
 
-Most gondoljunk bele abba, hogy hogyan játszódna le ugyan ez a forgatókönyv az interneten: mi történik, ha egy Wordpress oldal adminját nyitod meg két ablakban és az egyikben csinálsz egy új bejegyzést. A másik ablakban - mindegy mennyit vársz - az nem fog megjelenni, hacsak nem frissítesz.
+Igazából nem is kell elvégezned ezeket a lépéseket ahhoz, hogy tudd: igen. Amikor módosítunk valamit a helyi fájlrendszeren, a változás megjelenik mindenhol anélkül, hogy szükségünk lenne frissítésre vagy `callback` utasításra. Egyszerűen csak megtörténik.
 
-Az évek során hozzászoktunk, hogy a weboldalak nem rectívak és csak komoly munkával tehetőek azzá.
+Ugyanakkor gondoljunk bele abba, hogy hogyan játszódna le ugyan ez a forgatókönyv az interneten. Például ha egy Wordpress oldal admin felületét nyitod meg két ablakban és az egyikben csinálsz egy új bejegyzést. A másik ablakban - mindegy mennyit vársz - az nem fog megjelenni, hacsak nem frissítesz.
 
-De itt jön képbe a Meteor és  a keretrendszerk új hullámja melyek az webet valós idejűvé és reactívvá teszik.
+Az évek során hozzászoktunk ahhoz az elvhez, hogy egy weboldal olyasvalami, amivel csak rövid, különálló parancsokkal kommunikálunk.
+
+A Meteor viszont azon modern keretrendszerek és techonológiák közé tartozik, amelyek vállalják a kihívást, hogy az internetet valós idejűvé és reaktívvá tegyék.
 
 ### Mi is a Meteor?
 
-A Meteor egy - a Node.js-re épülő - keretrendszer amely valós idejű webes applikációk építését teszi lehetővé. Az adatbázis és a kliens(ek) között helyezkediek el és feladata hogy azok szinkronban legyenek.
+A Meteor egy - a Node.js-re épülő - keretrendszer amely valós idejű webes alkalmazások építését teszi lehetővé. Az adatbázis és a kliens(ek) között helyezkediek el és az a feladata, hogy azok szinkronban legyenek.
 
-Mivel a Meteor Node.js alapokra épült javascriptet használ a kliensen és a szerveren egyaránt. Ezen kívűl arra is képes, hogy kódot osszon meg a kliens és a szerver között.
+Mivel a Meteor Node.js alapokra épült, javascriptet használ a kliensen és a szerveren egyaránt. Sőt képes meg is osztani a ugyanazt a kódot a két környezet között.
 
-Ezek eredményeképpen egy olyan platform van kialakulóban, mely egyszerű, ugyanakkor rendkívüli teljesítményre képes. 
+Mindezek eredménye egy olyan platform, amely nagyon egyszerű és kiváló teljesítményre képes, mivel megszabadít minket a webes fejlesztés leggyakoribb nehézségeitől és buktatóitól.
 
 ### Miért válasszam a Meteort?
 
@@ -38,7 +40,7 @@ Ha nem is elégítené ki az igényeidet minden projectedre akkor is érdemes be
 
 Az utóbbi 6 hónapban a [Telescope-on](http://www.telesc.pe/) dolgoztunk, ami egy nyílt forráskódú Meteor app. A Telescope-ot szerveren futtatva egy közösségi híroldal kapunk (lényegében olyat, mint a [Reddit](http://www.reddit.com/) vagy a [Hacker News](https://news.ycombinator.com/))
 
-Nagyon sokat tanultunk az app írása közben. Sok-sok kérdésünkre nem volt egyszerű választ találni: számos helyről kellett az információt össze csipegetnünk és sok estben saját megoldással kellett előállnunk. Így ebben a könyvben osztjuk meg a tanultakat és kívánjuk mindenki számára egyszerűvé tenni egy teljesen működőképes Meteor app létrehozását. 
+Nagyon sokat tanultunk az app írása közben. Sok-sok kérdésünkre nem volt egyszerű választ találni: számos helyről kellett az információt össze csipegetnünk és sok estben saját megoldással kellett előállnunk. Így ebben a könyvben osztjuk meg a tanultakat és kívánjuk mindenki számára egyszerűvé tenni egy teljesen működőképes Meteor app létrehozását.
 
 Amit építeni fogunk az a Telescope valamivel egyszerűsített változata lesz: a Microscope. A folyamat közben külön kitérünk fontos Meteor componensekre mint a felhasználói fiókok, kollekciók, routolás stb...
 
@@ -46,7 +48,7 @@ Ha a könyv elolvasása után tovább szeretnéd folyatatni a tanulást, meg fog
 
 ### A szerzőkről
 
-Ha érdekel, hogy kik vagyunk és mit csináltunk eddig itt egy kis bemutatkozó. 
+Ha érdekel, hogy kik vagyunk és mit csináltunk eddig itt egy kis bemutatkozó.
 
 <%= image "tom-photo.jpg", "portrait" %>
 

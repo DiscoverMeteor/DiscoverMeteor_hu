@@ -32,73 +32,77 @@ Mindezek eredménye egy olyan platform, amely nagyon egyszerű és kiváló telj
 
 Miért érdemes a Meteort választani más keretrendszerk helyett? A sok-sok érv közül egyet emelnék ki: a Meteor könnyen tanulható.
 
-További előnye, hogy egy valós idejű webes applikáció órák alatt elkészülhet a Meteor segítségével. Ha azelőtt volt dolgod front-end fejlesztéssel, a JavaScript ismerős lehet és nem kell sok időt eltöltened a tanulásával.
+További előnye, hogy egy valós idejű webes applikáció órák alatt elkészülhet a Meteor segítségével. Ha azelőtt volt dolgod front-end fejlesztéssel, a JavaScript ismerős lehet és nem kell egy új nyelvet megtanulnod.
 
-Ha nem is elégítené ki az igényeidet minden projectedre akkor is érdemes belevágni: az alapok pár óra alatt megtanulhatóak és biztosítalak: rendkívülien élvezetes a Meteorral való kódolás.
+Lehet, hogy a Meteor lesz az ideális keretrendszer számodra, és lehet, hogy nem. De mivel az alapokat megismerheted néhány este, vagy egy hétvége alatt, miért is ne vágj bele és döntsd el magad?
 
 ### Miért válasszam ezt a könyvet?
 
-Az utóbbi 6 hónapban a [Telescope-on](http://www.telesc.pe/) dolgoztunk, ami egy nyílt forráskódú Meteor app. A Telescope-ot szerveren futtatva egy közösségi híroldal kapunk (lényegében olyat, mint a [Reddit](http://www.reddit.com/) vagy a [Hacker News](https://news.ycombinator.com/))
+Az utóbbi néhány évben számos Meteor projekten dolgoztunk, köztük webes és mobil alkalmazásokon, kereskedelmi és nyílt forráskódú projekteken egyaránt.
 
-Nagyon sokat tanultunk az app írása közben. Sok-sok kérdésünkre nem volt egyszerű választ találni: számos helyről kellett az információt össze csipegetnünk és sok estben saját megoldással kellett előállnunk. Így ebben a könyvben osztjuk meg a tanultakat és kívánjuk mindenki számára egyszerűvé tenni egy teljesen működőképes Meteor app létrehozását.
+Rengeteget tanultunk, de nem mindig volt egyszerű megtalálni a válaszokat a kérdéseinkre. Sok különböző forrásból kellett az információt összeollózni, és sok esetben mi magunk kellett, hogy felfedezzük a megoldást. Ezzel a könyvvel szeretnénk megosztani mindezt a tudást, és egy olyan útmutatót adni, ami lépésről lépésre végigvezet egy komplett Meteor alkalmazás megalkotásán.
 
-Amit építeni fogunk az a Telescope valamivel egyszerűsített változata lesz: a Microscope. A folyamat közben külön kitérünk fontos Meteor componensekre mint a felhasználói fiókok, kollekciók, routolás stb...
+Az alkalmazás, amit írunk, egyszerűsített változata lesz egy közösségi híroldalnak, mint például a [Hacker News](https://news.ycombinator.com/), vagy a [Reddit](http://www.reddit.com/). Menet közben minden olyan fontos komponenst érinteni fogunk, ami egy Meteor alkalmazáshoz kellhet, úgymint felhasználói fiókok, Meteor kollekciók, routolás, stb.
 
-Ha a könyv elolvasása után tovább szeretnéd folyatatni a tanulást, meg fogod érteni a Telescope kódját, hiszen hasonló elvek mentén írtuk.
+### Kiknek szól ez a könyv
+
+A könyv írása során célkitűzésünk volt, többek között, hogy könnyen követhető és megérthető legyen. Így jó eséllyel akkor is végig tudod venni, ha semmilyen Meteorral, Node.js-sel, MVC keretrendszerekkel, vagy akár szerver oldali programozással kapcsolatos tapasztalatod nincs.
+
+Ugyanakkor feltételezünk alapvető JavaScript ismereteket és fogalmakat. Nyugi, ha valaha is összedobtál egy kis JQuery kódot vagy eljátszottál kicsit a böngészőben a konzollal, akkor nem lesz gond!
+
+Ha viszont még nem mozogsz annyira otthonosan a JavaScript világában, akkor javasoljuk, hogy mielőtt belevágnál a könyvbe, szaladj végig a [JavaScript alapok a Meteorhoz](https://www.discovermeteor.com/blog/javascript-for-meteor/) írásunkon.
 
 ### A szerzőkről
 
-Ha érdekel, hogy kik vagyunk és mit csináltunk eddig itt egy kis bemutatkozó.
+Ha érdekel, hogy kik vagyunk és miért is kéne bíznod bennünk, itt egy kis bemutatkozás.
 
 <%= image "tom-photo.jpg", "portrait" %>
 
-**Tom Coleman** A [Percolate Studio](http://percolatestudio.com/) fejlesztője. Társ-fejlesztője a [Meteorite-nak](https://github.com/oortcloud/meteorite) és az [Atmosphere-nek](http://atmosphere.meteor.com), továbbá sok nyílt-forráskódú Meteor project mögött is ő áll (mint az [Iron Router](https://github.com/EventedMind/iron-router)).
+**Tom Coleman** egy webes szoftverfejlesztő csapat, a [Percolate Studio](http://percolatestudio.com/) tagja, ahol a minőségen és a felhasználói élményen van a hangsúly. Társ-fejlesztője az [Atmosphere-nek](http://atmosphere.meteor.com), továbbá sok nyílt-forráskódú Meteor project mögött is ő áll (mint pl az [Iron Router](https://github.com/EventedMind/iron-router)).
 
 <%= image "sacha-photo.jpg", "portrait" %>
 
 **Sacha Greif** olyan startupoknál dolgozott mint a  [Hipmunk](http://hipmunk.com) és a  [RubyMotion](http://rubymotion.com) mint termék- és web designer. Ő csinálja a [Telescope-ot](http://telesc.pe) valamint a [Sidebar-t](http://sidebar.io) (ami szinténn Telescope alapokon nyugszik), valamint ő a [Folyo](http://folyo.me) alapítója.
 
-### Chapters & Sidebars
+### Fejezetek és extrák
 
-////
+Azt szeretnénk, hogy mind a kezdő, mind a haladó Meteor fejlesztők számára hasznos legyen a könyv ezért két típusra bontottuk a fejezeteket: általános (1-től 14-ig számozva) és *extra* (.5 számozással).
 
-////
+Az általános fejezetek végigvezetnek az alkalmazás fejlesztésén, megpróbálnak a lehető leggyorsabban használható tudást adni. Elmagyarázzák a legfontosabb lépéseket anélkül, hogy túl sokáig fárasztanának a részletekkel.
 
-////
+Ugyanakkor az extra fejezetek mélyebben tárgyalják a Meteor bonyolult részeit, és segítenek megérteni, hogy mi történik valójában a háttérben.
 
-////
+Tehát, ha kezdő vagy, nyugodtan hagyd ki az extra fejezeteket első körben, majd később visszatérhetsz rájuk, amikor már valamennyire megismerted a Meteort.
 
-### Commits & Live Instances
+### *Commit* -ok és futtatható példányok
+Nincs rosszabb, mint haladni végig egy programozással kapcsolatos könyvben, majd egyszercsak rájönni, hogy a kódod már nincs szinkronban a példákkal, és már semmi nem úgy működik, ahogy kellene.
 
-////
-
-////
-
+Hogy ezt elkerüljük, létrehoztunk egy [Github repository-t a Microscope-hoz](https://github.com/DiscoverMeteor/Microscope), és közvetlen linket fogunk megadni minden commithoz, ami egy-egy kisebb változtatáshoz tartozik a kódban. Ezen felül minden commithoz linkeljük az alkalmazás egy futtatható példányát, mely az aktuális commithoz tartozó állapotot tükrözi. Íme egy példa, hogy is fog ez ki kinézni:
 <%= commit "11-2", "Display notifications in the header." %>
 
-////
+Arra viszont felhívnánk a figyelmed, hogy csak azért, mert ezekhez a commitokhoz hozzáférést biztosítunk, még nem érdemes az egyik `git checkout` -ról rögtön a másikra ugrani. Sokkal könnyebben fogsz tanulni, ha rászánod az időt, hogy kézzel írd meg az alkalmazásod kódját!
 
-### A Few Other Resources
+### Néhány egyéb forrás
 
-////
+Ha bármikor is többet akarsz megtudni a Meteor egy bizonyos részéről, a [hivatalos Meteor dokumentáció](http://docs.meteor.com/) a legjobb kiindulási pont.
 
-////
+Szintén ajánljuk a [Stack Overflow](http://stackoverflow.com/questions/tagged/meteor) oldalt kérdésekhez és problémákhoz, és a #meteor [IRC csatornát](https://webchat.freenode.net/), ha azonnali segítségre van szükséged.
 
 <% note do %>
 
-### Do I Need Git?
+### Szükségem van a Gitre?
 
-////
+Ugyan a Git verziókezelő rendszer ismerete a könyv végigolvasásához nem feltétlen szükséges, mi mindenképpen javasoljuk.
 
-////
+Gyorstalpalónak javasoljuk az [A Git egyszerűbb, mint hinnéd](http://nfarina.com/post/9868516270/git-is-simpler) című írást Nick Farinától.
 
-////
+Ha kezdő Gites vagy, szintén javasoljuk a [GitHub for Mac](http://mac.github.com/) alkalmazást, amellyel a parancssor használata nélkül tudsz repókat klónozni és kezelni.
 
 <% end %>
 
-### Getting in Touch
+### Kapcsolat
 
-- ////
-- ////
-- ////
-- ////
+- Ha kapcsolatba szeretnél lépni velünk, írj emailt a [hello@discovermeteor.com](mailto:hello@discovermeteor.com)-ra.
+- Ha bármilyen hibát, vagy elírást találsz a könyvben, [nyiss egy bugot a GitHubon](https://github.com/DiscoverMeteor/book/issues).
+- Ha a Microscope kódjával van gondod, [nyiss egy bugot a Microscope repository-ban](https://github.com/DiscoverMeteor/Microscope/issues).
+- Végül, ha bármi egyéb kérdésed lenne, kommentelhetsz ezen az oldalon is, a bal szélen található panelen.

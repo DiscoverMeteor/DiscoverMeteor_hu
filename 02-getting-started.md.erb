@@ -3,140 +3,122 @@ title: Getting Started
 slug: getting-started
 date: 0002/01/01
 number: 2
-contents: Install Meteor & Meteorite.|Learn about the 5 types of Meteor packages.|Setup the file structure of your Meteor app.
+contents: Megtanulhatod, hogyan telepítheted a meteort.|Megismerheted a Meteor csomagok 5 típusát.|Megtudhatod, hogy néz ki egy Meteor alkalmazás könyvtárszerkezete.
 paragraphs: 49
 ---
 
-////
+Az első benyomás mindig fontos, és a Meteor telepítése viszonylag fájdalommentes. A legtöbb esetben 5 perc alatt kész a rendszered.
 
-////
+Először is nyiss egy terminál blakot és írd be a következő parancsot:
 
 ~~~bash
-$ curl https://install.meteor.com | sh
+curl https://install.meteor.com | sh
 ~~~
 
-////
+Ez telepíteni fogja a `meteort` a rendszeredre, és máris kezdheted a munkát!
 
 <% note do %>
 
-### *Not* Installing Meteor
+### Ha *Nem* szeretnéd telepíteni a Meteort
 
-////
+Ha nem tudod, (vagy nem akarod) telepíteni a Meteort a gépedre, érdemes kipróbálnod a [Nitrous.io](http://nitrous.io)-t.
 
-////
+A Nitrous.io egy szolgáltatás, amely lehetővé teszi, hogy alkalmazásokat futtass és szerkeszd a kódjukat egyszerűen egy böngészőben, mi pedig írtunk egy [rövid ismertetőt](https://www.discovermeteor.com/blog/meteor-nitrous), hogy segítsünk a kezdeti beállításokban.
 
-////
-
-<% end %>
- 
-### Meteorite
-
-////
-
-////
-
-### Installing Meteorite
-
-////
- 
-- [Node download site](http://nodejs.org/download/)
-- [Git download site](http://git-scm.com/downloads)
-
-////
-
-~~~bash
-$ npm install -g meteorite
-~~~
-
-<% note do %>
-
-### Permission errors?
-
-////
-
-~~~bash
-$ sudo -H npm install -g meteorite
-~~~
-
-////
+Kövesd ezt az útmutatót egészen az "Installing Meteor" részig (még azt is csináld meg), majd folytathatod ezt a könyvet az "Egy egyszerű alkalmazás létrehozása" résztől.
 
 <% end %>
 
-////
+### Egy egyszerű alkalmazás létrehozása
 
-////
-
-<% note do %>
-
-  ### `mrt` vs `meteor`
-  
-////
-  
-<% end %>
-
-### Creating a Simple App
-
-////
+Most, hogy telepítettük a Meteort, hozzunk létre egy egyszerű alkalmazást. Ehhez a Meteor parancssori eszköztárát fogjuk használni:
 
 ~~~bash
-$ mrt create microscope
+meteor create microscope
 ~~~
 
-////
+Ez a parancs letölti a Meteort, és létrehoz egy használatra kész projektet. Amikor végzett, találnod kell egy `microscope/` könyvtárat a következő tartalommal:
 
 ~~~bash
-microscope.css  
-microscope.html 
-microscope.js   
-smart.json 
+.meteor
+microscope.css
+microscope.html
+microscope.js
 ~~~
 
-////
+Ez az egyszerű alkalmazás, amelyet a Meteor létrehozott, jól szemléltet néhány Meteor módszert.
 
-////
+Igaz, nem sok mindenre képes, de máris futtathatjuk az alkalmazást. Ehhez add ki a következő parancsokat a terminálban:
 
 ~~~bash
-$ cd microscope
-$ meteor
+cd microscope
+meteor
 ~~~
 
-////
+Most nyisd meg a böngésződben a `http://localhost:3000/` (vagy az ezzel egyenértékű `http://0.0.0.0:3000/`) oldalt, ahol valami ilyesmit kell látnod:
 
 <%= screenshot "2-1", "Meteor's Hello World." %>
 
-<%= commit "2-1", "Created basic microscope project." %>
+<%= commit "2-1", "Az alap microscope projekt létrehozása." %>
 
-////
+Gratulálok! Elkészült és már fut is az első Meteor alkalmazásod. Ha esetleg le szeretnéd állítani, csak nyomnod kell egy `ctrl+c`-t a terminálban, ahol elindítottad.
 
-### Adding a Package
-
-////
-
-~~~bash
-$ mrt add bootstrap
-~~~
-
-<%= commit "2-2", "Added bootstrap package." %>
+Megjegyezném továbbá, hogy ha használod a Gitet akkor most van itt az ideje létrehozni egy repót a `git init` paranccsal.
 
 <% note do %>
 
-### A Note on Packages
+### Viszlát Meteorite
 
-////
+Volt idő, amikor a Meteornak szüksége volt egy külső csomagkezelőre, amit úgy hívtak, hogy Meteorite. A Meteor 0.9.0 verziója óta erre nincs többé szükség, hiszen a Meteorite szolgáltatásait beépítettük a magába a Meteorba.
 
-- ////
-- ////
-- ////
-- ////
-- ////
+Ha tehát bármilyen hivatkozást találsz a Meteorite parancssori eszközeire (`mrt`) ebben a könyvben, vagy bárhol máshol, nyugodtan kicserélheted azt a megszokott `meteor` parancsra.
 
 <% end %>
 
-### The File Structure of a Meteor App
+### Egy csomag hozzáadása
 
-////
+Most a Meteor csomagkezelőjét fogjuk használni, hozzáadjuk a [Bootstrap](http://getbootstrap.com/) keretrendszert a projektünkhöz.
 
-////
+Ez semmiben nem különbözik attól, mintha a megszokott módon kézzel beágyaznánk a megfelelő CSS és JavaScript fájlokat, azzal a különbséggel, hogy rábízzuk ezt a munkát a csomag felelősére, hogy mindig naprakész maradjon.
+
+Ha már itt tartunk, szintén hozzáadjuk az [Underscore](http://underscorejs.org/) csomagot. Az Underscore egy JavaScript függvénykönyvtár, amely nagyon hasznos tud lenni, amikor JavaScript adatstruktúrákkal kell dolgozni.
+
+Jelenleg az `underscore` része a "hivatalos" Meteor csomagoknak, ezért nem szerepel itt a készítő neve.
+
+~~~bash
+meteor add mizzao:bootstrap-3
+meteor add underscore
+~~~
+
+Megjegyeznénk, hogy a Bootstrap 3-at használjuk. Néhány képernyőkép a könyvben még egy korábbi Microscope verzióról készült, amelyben még Bootstrap 2 volt, így előfordulhat, hogy ezek egy kicsit másképp néznek ki.
+
+<%= commit "2-2", "Hozzáadtuk a bootstrap és az underscore csomagokat." %>
+
+Amint hozzáadtad a Bootstrap csomagot, észrevehetsz némi változást az alkalmazásunkban:
+
+<%= screenshot "2-1b", "With Bootstrap." %>
+
+Ellentétben a hagyományos módszerrel, amikor kézzel ágyazunk be külső forrás fájlokat, nem kellett foglalkoznunk a linkek létrehozásával, mert a Meteor megteszi ezt helyettünk. Ez mindössze egy a sok előnyből, amelyet a csomagok használata nyújt számunkra.
+
+<% note do %>
+
+### Megjegyzés a csomagokhoz
+
+Amikor csomagokról beszélünk a Meteorral kapcsolatban, érdemes pontosan fogalmazni. A Meteor 5 alap típusát értelmezi a csomagoknak.
+
+- A Meteor központi része ún. **Meteor platform csomagokra** van bontva. Ezek minden Meteor alkalmazáshoz hozzáadódnak, és lényegében soha nem is kell foglalkoznod velük.
+- Az általános Meteor csomagokat úgy hívjuk, hogy "**isopacks**", azaz izomorf csomagok (ami azt jelenti, hogy a szerveren és a kliensen is képesek működni). **A saját fejlesztésű csomagokat**, mint pl az `account-ui`, vagy az `appcache` a Meteor csapata tartja karban, és [részei a Meteornak](http://docs.meteor.com/#packages).
+- **A mások által fejlesztett csomagok** olyan isopack-ek, amelyeket más felhasználók fejlesztenek és feltöltik őket a Meteor csomag szerverére. Böngészhetsz köztük az [Atmosphere](http://atmosphere.meteor.com)-en, vagy a `meteor search` paranccsal.
+- **A Lokális csomagokat** te magad fejleszted és a `/packages` könyvtárban tárolhatod őket.
+- **Az NPM csomagok** (Node.js Packed Modules) a Node.js-hez tartozó csomagok. Igaz, közvetlenül nem működnek a Meteorban, viszont az előbb említett csomagok használ*hat*ják őket.
+
+<% end %>
+
+### A meteor alkalmazások fájl struktúrája
+
+Mielőtt elkezdenénk kódolni, jól be kell konfigurálni a projektünket. Hogy biztosan tiszta lapról induljunk, nyissuk meg a `microscope` könyvtárat és töröljük a `microscope.html`, `microscope.js`, és `microscope.css` fájlokat.
+
+Ezután hozzunk létre négy alkönyvtárat a `/microscope`-on belül: `/client`, `/server`, `/public`, és `/lib`.
 
 ////
 

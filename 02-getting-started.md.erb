@@ -19,7 +19,7 @@ Ez telepíteni fogja a `meteort` a rendszeredre, és máris kezdheted a munkát!
 
 <% note do %>
 
-### Ha *Nem* szeretnéd telepíteni a Meteort
+### Ha *nem* szeretnéd telepíteni a Meteort
 
 Ha nem tudod, (vagy nem akarod) telepíteni a Meteort a gépedre, érdemes kipróbálnod a [Nitrous.io](http://nitrous.io)-t.
 
@@ -108,13 +108,13 @@ Amikor csomagokról beszélünk a Meteorral kapcsolatban, érdemes pontosan foga
 
 - A Meteor központi része ún. **Meteor platform csomagokra** van bontva. Ezek minden Meteor alkalmazáshoz hozzáadódnak, és lényegében soha nem is kell foglalkoznod velük.
 - Az általános Meteor csomagokat úgy hívjuk, hogy "**isopacks**", azaz izomorf csomagok (ami azt jelenti, hogy a szerveren és a kliensen is képesek működni). **A saját fejlesztésű csomagokat**, mint pl az `account-ui`, vagy az `appcache` a Meteor csapata tartja karban, és [részei a Meteornak](http://docs.meteor.com/#packages).
-- **A mások által fejlesztett csomagok** olyan isopack-ek, amelyeket más felhasználók fejlesztenek és feltöltik őket a Meteor csomag szerverére. Böngészhetsz köztük az [Atmosphere](http://atmosphere.meteor.com)-en, vagy a `meteor search` paranccsal.
+- **A mások által fejlesztett csomagok** olyan isopack-ek, amelyeket más felhasználók fejlesztenek és feltöltik őket a Meteor csomagszerverére. Böngészhetsz köztük az [Atmosphere](http://atmosphere.meteor.com)-en, vagy a `meteor search` paranccsal.
 - **A Lokális csomagokat** te magad fejleszted és a `/packages` könyvtárban tárolhatod őket.
 - **Az NPM csomagok** (Node.js Packed Modules) a Node.js-hez tartozó csomagok. Igaz, közvetlenül nem működnek a Meteorban, viszont az előbb említett csomagok használ*hat*ják őket.
 
 <% end %>
 
-### A meteor alkalmazások fájl struktúrája
+### A meteor alkalmazások fájlstruktúrája
 
 Mielőtt elkezdenénk kódolni, jól be kell konfigurálni a projektünket. Hogy biztosan tiszta lapról induljunk, nyissuk meg a `microscope` könyvtárat és töröljük a `microscope.html`, `microscope.js`, és `microscope.css` fájlokat.
 
